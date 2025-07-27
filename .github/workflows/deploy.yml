@@ -1,0 +1,21 @@
+name: 🚀 Deploy to InfinityFree
+
+on:
+  push:
+    branches:
+      - main  # لو الفرع الرئيسي اسمه master اكتبه هنا
+
+jobs:
+  ftp-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+
+      - name: Deploy via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ftpupload.net
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: /htdocs/Mass-book   # لو حاطط الموقع في مجلد تاني غيّره هنا
