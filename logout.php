@@ -10,6 +10,6 @@ $_SESSION['userEmail']= "";
 $_SESSION["userLName"] = "";
 $_SESSION["userFName"] ="";
 
-header("Location: ahmedmassoud.rf.gd/Mass-book");
+header("Location: https://ahmedmassoud.rf.gd/Mass-book/");
 
 ?>
