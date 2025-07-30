@@ -72,7 +72,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             <input type="checkbox" id="chk">
             <div class="signup">
                 <label for="chk" class="sig">Sign up</label>
-                <form action="http://127.0.0.1:5000/signup" method="POST" onsubmit="return check()">
+                <form action="https://AhmedMassoud.pythonanywhere.com/signup" method="POST" onsubmit="return check()">
                     <div class="user-box">
                         <input type="text" name="name" title="Enter your name" id="name" autocomplete="off" />
 
