@@ -13,11 +13,10 @@ def signup():
     password = request.form['password']
 
     # 1. تحميل القالب من الموقع
-    try:
-        response = requests.get("https://ahmedmassoud.rf.gd/Mass-book/profile/profile.htm")
-        template_content = response.text
-    except Exception as e:
-        return f"فشل تحميل القالب: {e}", 500
+    template_path = 'profile/profile.htm'
+    with open(template_path, 'r') as template_file:
+        template_content = template_file.read()
+
 
     # 2. تعديل القالب
     updated_content = template_content.replace('{{name}}', name).replace('{{email}}', email)
