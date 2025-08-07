@@ -190,3 +190,6 @@ label[for="chk"] {
 .user-box i::before{
     cursor: pointer;
 }
+.login i::before{
+    color:var(--color1) ;
+}

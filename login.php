@@ -134,11 +134,14 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 <div class="user-box">
 
                     <input type="password" name="password" title="Enter password" id="password2" required>
+                    <div class="eye">
+                        <i class="fa-solid fa-eye" id="P2eye1"></i>
+                        <i class="fa-solid fa-eye-slash" id="P2eye2"></i>
+                    </div>
+                        <label>Password</label>
 
-                    <label>Password</label>
-
-                </div>
-                <input type="submit" class="button" id="button2" value="login">
+                    </div>
+                    <input type="submit" class="button" id="button2" value="login">
 
             </form>
 

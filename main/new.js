@@ -192,3 +192,38 @@ eye2.onclick = function () {
   eye1.style.display = "inline-block";
   eye2.style.display = "none";
 };
+
+
+const password2 = document.getElementById("password2");
+const P2eye1 = document.getElementById("P2eye1"); // عين مفتوحة
+const P2eye2 = document.getElementById("P2eye2"); // عين مغلقة
+
+// عند الكتابة في الباسورد، أظهر الأيقونة فقط إذا الحقل مش فاضي
+password2.addEventListener('input', () => {
+  if (password2.value.trim() !== '') {
+    if (password2.type === "password") {
+      P2eye1.style.display = "inline-block";
+      P2eye2.style.display = "none";
+    } else {
+      P2eye1.style.display = "none";
+      P2eye2.style.display = "inline-block";
+    }
+  } else {
+    P2eye1.style.display = "none";
+    P2eye2.style.display = "none";
+  }
+});
+
+// عند الضغط على العين المفتوحة → إظهار الباسورد
+P2eye1.onclick = function () {
+  password2.type = "text";
+  P2eye1.style.display = "none";
+  P2eye2.style.display = "inline-block";
+};
+
+// عند الضغط على العين المغلقة → إخفاء الباسورد
+P2eye2.onclick = function () {
+  password2.type = "password";
+  P2eye1.style.display = "inline-block";
+  P2eye2.style.display = "none";
+};
