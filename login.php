@@ -48,13 +48,13 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     <title>Page title</title>
     <link rel="stylesheet" href="main/main.css">
     <link rel="stylesheet" href="main/new.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
 </head>
 
 <body>
 
 
-<script src="main/sweetalert.js"></script>
+    <script src="main/sweetalert.js"></script>
     <?php
     if ($wrong == true) {
         echo ('
@@ -66,7 +66,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
 
     ?>
-    
+
     <div id="container">
         <div class="main" id="main">
             <input type="checkbox" id="chk">
@@ -77,34 +77,43 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                         <input type="text" name="name" title="Enter your name" id="name" autocomplete="off" />
 
                         <label id="nameLable">Name</label>
-
-
-                        <img src="img/logo.svg" alt="Logo" class="logo-img" id="nameIcon" />
-                        <i></i>
+                        <div class="eye">
+                            <i class="fa-solid fa-circle-info" id="nameIcon"></i>
+                        </div>
                     </div>
                     <div class="user-box">
-                        <input type="text" name="username" title="Enter Username" id="username"  autocomplete="off">
+                        <input type="text" name="username" title="Enter Username" id="username" autocomplete="off">
 
                         <label id="usernameLabel">Username</label>
 
+                        <div class="eye">
 
-                        <img src="img/logo.svg" alt="Logo" class="logo-img" id="userIcon" />
+                            <i class="fa-solid fa-circle-info" id="userIcon"></i>
+                        </div>
 
 
                         <i></i>
                     </div>
                     <div class="user-box">
-                        <input type="text" name="email" title="Enter email" id="email"  autocomplete="off">
+                        <input type="text" name="email" title="Enter email" id="email" autocomplete="off">
                         <label id="emailLabel">Email</label>
-                        <img src="img/logo.svg" alt="Logo" class="logo-img" id="emailIcon">
+                        <div class="eye">
+
+                            <i class="fa-solid fa-circle-info" id="emailIcon"></i>
+                        </div>
                     </div>
                     <div class="user-box">
-                        <input type="password" name="password" title="Enter password" id="password"  autocomplete="off">
+                        <input type="password" name="password" title="Enter password" id="password" autocomplete="off">
+
                         <label id="passwordLabel">Password</label>
-                        <img src="img/logo.svg" alt="Logo" class="logo-img" id="passIcon">
+                        <div class="eye">
+                            <i class="fa-solid fa-eye" id="eye1"></i>
+                            <i class="fa-solid fa-eye-slash" id="eye2"></i>
+                            <i class="fa-solid fa-circle-info" id="passIcon"></i>
+                        </div>
                     </div>
 
-                    <input type="submit" class="button" id="button" value="create account"> 
+                    <input type="submit" class="button" id="button" value="create account">
                 </form>
             </div>
 

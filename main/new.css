@@ -1,5 +1,3 @@
-
-
 body,
 html {
     width: 100%;
@@ -124,8 +122,9 @@ body {
     right: 0px;
 
 }
+
 .user-box .logo-img:hover {
-filter: invert(50%) sepia(0%) saturate(7448%) hue-rotate(136deg) brightness(112%) contrast(112%);
+    filter: invert(50%) sepia(0%) saturate(7448%) hue-rotate(136deg) brightness(112%) contrast(112%);
 }
 
 .user-box input {
@@ -175,4 +174,19 @@ label[for="chk"] {
 
 .login input {
     border-color: var(--color1);
+}
+
+.eye {
+    position: absolute;
+    top: 13px;
+    right: 0px;
+}
+.eye .fa-eye{
+    display: none;
+}
+.eye .fa-eye-slash{
+    display: none;
+}
+.user-box i::before{
+    cursor: pointer;
 }

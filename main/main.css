@@ -28,7 +28,13 @@ body::-webkit-scrollbar-thumb:hover {
   text-transform: capitalize;
   scroll-behavior: smooth;
 
+
 }
+i , i::before {
+  font-family: "Font Awesome 6 Free" !important;
+}
+
+
 
 html , body{
   overflow-x: hidden;

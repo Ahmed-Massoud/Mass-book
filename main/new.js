@@ -158,3 +158,37 @@ function login() {
 
 
 }
+
+const password = document.getElementById("password");
+const eye1 = document.getElementById("eye1"); // عين مفتوحة
+const eye2 = document.getElementById("eye2"); // عين مغلقة
+
+// عند الكتابة في الباسورد، أظهر الأيقونة فقط إذا الحقل مش فاضي
+password.addEventListener('input', () => {
+  if (password.value.trim() !== '') {
+    if (password.type === "password") {
+      eye1.style.display = "inline-block";
+      eye2.style.display = "none";
+    } else {
+      eye1.style.display = "none";
+      eye2.style.display = "inline-block";
+    }
+  } else {
+    eye1.style.display = "none";
+    eye2.style.display = "none";
+  }
+});
+
+// عند الضغط على العين المفتوحة → إظهار الباسورد
+eye1.onclick = function () {
+  password.type = "text";
+  eye1.style.display = "none";
+  eye2.style.display = "inline-block";
+};
+
+// عند الضغط على العين المغلقة → إخفاء الباسورد
+eye2.onclick = function () {
+  password.type = "password";
+  eye1.style.display = "inline-block";
+  eye2.style.display = "none";
+};
