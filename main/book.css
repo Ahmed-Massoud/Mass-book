@@ -1,34 +1,48 @@
-
 .book::before,
 .book::after {
 	content: "";
 }
-a{
+
+a {
 	cursor: pointer;
 }
-.component > ul::-webkit-scrollbar{
-  height:4px;}
-.component > ul::-webkit-scrollbar-thumb{background: #999;border-radius: 5px;}
-.component > ul::-webkit-scrollbar-thumb:hover {background: #777;}
-.component > ul::-webkit-scrollbar-thumb:active{cursor: grabbing;}
+
+.component>ul::-webkit-scrollbar {
+	height: 4px;
+}
+
+.component>ul::-webkit-scrollbar-thumb {
+	background: #999;
+	border-radius: 5px;
+}
+
+.component>ul::-webkit-scrollbar-thumb:hover {
+	background: #777;
+}
+
+.component>ul::-webkit-scrollbar-thumb:active {
+	cursor: grabbing;
+}
 
 
-.component > ul{
-   overflow-x: scroll;
-  overflow-y: hidden;
-   cursor: grab;
+.component>ul {
+	overflow-x: scroll;
+	overflow-y: hidden;
+	cursor: grab;
 
 }
-.component > ul.active {
-  cursor: grabbing;
-  cursor: -webkit-grabbing;
+
+.component>ul.active {
+	cursor: grabbing;
+	cursor: -webkit-grabbing;
 }
+
 ul {
 	margin: 0;
 	padding: 0;
 	list-style: none;
-  display:flex;
-  
+	display: flex;
+
 }
 
 
@@ -37,32 +51,33 @@ ul {
 	clear: both;
 	width: 100%;
 	text-align: center;
-  overflow:scroll;
+	overflow: scroll;
 }
-.align > li {
+
+.align>li {
 	width: 500px;
 	display: inline-block;
 	margin: 0px 0px 0px 0px;
 	padding: 0 0 0 10px;
 	vertical-align: top;
-		transform:scale(0.7);
-        position: relative;
+	transform: scale(0.7);
+	position: relative;
 }
 
-.align > li:first-child {
+.align>li:first-child {
 	padding: 0 0 0 10px;
 }
 
-.align > li input{
+.align>li input {
 	display: none;
 }
 
 
 
 .book {
- 
+
 	position: relative;
-	width: 160px; 
+	width: 160px;
 	height: 220px;
 	-webkit-perspective: 1000px;
 	-moz-perspective: 1000px;
@@ -103,6 +118,7 @@ ul {
 .book_spine li:first-child {
 	background: #eee;
 }
+
 .book_spine li:last-child {
 	background: #333;
 }
@@ -126,7 +142,7 @@ ul {
 
 /* page */
 
-.book .page > li {
+.book .page>li {
 	background: -webkit-linear-gradient(left, #e1ddd8 0%, #fffbf6 100%);
 	background: -moz-linear-gradient(left, #e1ddd8 0%, #fffbf6 100%);
 	background: -ms-linear-gradient(left, #e1ddd8 0%, #fffbf6 100%);
@@ -292,6 +308,7 @@ ul {
 	-moz-transform: rotateX(90deg) rotateZ(90deg) translateZ(80px) translateX(-2px) translateY(-78px);
 	transform: rotateX(90deg) rotateZ(90deg) translateZ(80px) translateX(-2px) translateY(-78px);
 }
+
 .hardcover_front li:last-child:before {
 	box-shadow: 0px 0px 30px 5px #333;
 	-webkit-transform: rotateX(90deg) rotateZ(90deg) translateZ(-140px) translateX(-2px) translateY(-78px);
@@ -312,6 +329,7 @@ ul {
 	-moz-transform: rotateY(90deg) translateZ(-2px) translateX(2px);
 	transform: rotateY(90deg) translateZ(-2px) translateX(2px);
 }
+
 .hardcover_back li:first-child:before {
 	-webkit-transform: rotateY(90deg) translateZ(158px) translateX(2px);
 	-moz-transform: rotateY(90deg) translateZ(158px) translateX(2px);
@@ -397,7 +415,7 @@ ul {
 }
 
 .book .page,
-.book .page > li {
+.book .page>li {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -414,7 +432,7 @@ ul {
 	z-index: 10;
 }
 
-.book .page > li {
+.book .page>li {
 	width: 100%;
 	height: 100%;
 	-webkit-transform-origin: left center;
@@ -428,31 +446,31 @@ ul {
 	transition-timing-function: ease;
 }
 
-.book .page > li:nth-child(1) {
+.book .page>li:nth-child(1) {
 	-webkit-transition-duration: 0.6s;
 	-moz-transition-duration: 0.6s;
 	transition-duration: 0.6s;
 }
 
-.book .page > li:nth-child(2) {
+.book .page>li:nth-child(2) {
 	-webkit-transition-duration: 0.6s;
 	-moz-transition-duration: 0.6s;
 	transition-duration: 0.6s;
 }
 
-.book .page > li:nth-child(3) {
+.book .page>li:nth-child(3) {
 	-webkit-transition-duration: 0.4s;
 	-moz-transition-duration: 0.4s;
 	transition-duration: 0.4s;
 }
 
-.book .page > li:nth-child(4) {
+.book .page>li:nth-child(4) {
 	-webkit-transition-duration: 0.5s;
 	-moz-transition-duration: 0.5s;
 	transition-duration: 0.5s;
 }
 
-.book .page > li:nth-child(5) {
+.book .page>li:nth-child(5) {
 	-webkit-transition-duration: 0.6s;
 	-moz-transition-duration: 0.6s;
 	transition-duration: 0.6s;
@@ -461,17 +479,18 @@ ul {
 /*
 	5. events
 */
-.align > li input:checked ~  label .book{
+.align>li input:checked~label .book {
 	margin-left: 120px;
 }
-.align > li input:checked ~  label .book .hardcover_front {
+
+.align>li input:checked~label .book .hardcover_front {
 	-webkit-transform: rotateY(-145deg) translateZ(0);
 	-moz-transform: rotateY(-145deg) translateZ(0);
 	transform: rotateY(-145deg) translateZ(0);
 	z-index: 0;
 }
 
-.align > li input:checked ~  label  .book .page li:nth-child(1) {
+.align>li input:checked~label .book .page li:nth-child(1) {
 	-webkit-transform: rotateY(-30deg);
 	-moz-transform: rotateY(-30deg);
 	transform: rotateY(-30deg);
@@ -480,7 +499,7 @@ ul {
 	transition-duration: 1.5s;
 }
 
-.align > li input:checked ~  label  .book .page li:nth-child(2) {
+.align>li input:checked~label .book .page li:nth-child(2) {
 	-webkit-transform: rotateY(-35deg);
 	-moz-transform: rotateY(-35deg);
 	transform: rotateY(-35deg);
@@ -489,7 +508,7 @@ ul {
 	transition-duration: 1.8s;
 }
 
-.align > li input:checked ~  label  .book .page li:nth-child(3) {
+.align>li input:checked~label .book .page li:nth-child(3) {
 	-webkit-transform: rotateY(-118deg);
 	-moz-transform: rotateY(-118deg);
 	transform: rotateY(-118deg);
@@ -498,7 +517,7 @@ ul {
 	transition-duration: 1.6s;
 }
 
-.align > li input:checked ~  label  .book .page li:nth-child(4) {
+.align>li input:checked~label .book .page li:nth-child(4) {
 	-webkit-transform: rotateY(-130deg);
 	-moz-transform: rotateY(-130deg);
 	transform: rotateY(-130deg);
@@ -507,7 +526,7 @@ ul {
 	transition-duration: 1.4s;
 }
 
-.align > li input:checked ~  label  .book .page li:nth-child(5) {
+.align>li input:checked~label .book .page li:nth-child(5) {
 	-webkit-transform: rotateY(-140deg);
 	-moz-transform: rotateY(-140deg);
 	transform: rotateY(-140deg);
@@ -527,8 +546,6 @@ ul {
 	-webkit-backface-visibility: hidden;
 	-moz-backface-visibility: hidden;
 	backface-visibility: hidden;
-  background:url("../Books/book1.jpg");
-  background-size:cover;
+	background-size: cover;
+	background-position: center center;
 }
-
-

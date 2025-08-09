@@ -165,7 +165,7 @@ $mybooks = mysqli_query($conn, "SELECT * FROM `books` LIMIT $offset, $booksPerPa
                       <p>Language:----.</p>
                       <p>rate:5.0.</p>
                       <p>learn:.....</p>
-                      <a href="games.html"> <button>
+                      <a href="games.php"> <button>
                           <p>download</p>
                         </button>
                       </a>
