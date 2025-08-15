@@ -18,4 +18,8 @@ jobs:
           server: ftpupload.net
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
+<<<<<<< HEAD
           server-dir: /mass-book.rf.gd/htdocs/    # لو حاطط الموقع في مجلد تاني غيّره هنا
+=======
+          server-dir: /mass-book.rf.gd/htdocs/   # لو حاطط الموقع في مجلد تاني غيّره هنا
+>>>>>>> 173a2bd236013b6cabc593608ba247b5f3d65443
