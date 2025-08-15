@@ -177,7 +177,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                       <p>Language:----.</p>
                       <p>rate:5.0.</p>
                       <p>learn:.....</p>
-                      <a href="Books/<?php echo htmlspecialchars($name); ?>/"> <button>
+                      <a href="books/<?php echo htmlspecialchars($name); ?>/"> <button>
                           <p>download</p>
                         </button>
                       </a>
@@ -265,7 +265,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                       <p>Language:----.</p>
                       <p>rate:5.0.</p>
                       <p>learn:.....</p>
-                      <a href="Books/<?php echo htmlspecialchars($name); ?>/"> <button>
+                      <a href="books/<?php echo htmlspecialchars($name); ?>/"> <button>
                           <p>download</p>
                         </button>
                       </a>
