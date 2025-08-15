@@ -157,7 +157,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <?php
 
   ?>
-  <a href='Books/{{name}}/{{fileName}}' class="download">Download</a>
+  <a href='books/{{name}}/{{fileName}}' class="download">Download</a>
   <section>
     <h1 class="titel">
       The <span>sugest</span> Books
