@@ -47,10 +47,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (file_exists($templatePath)) {
         $template = file_get_contents($templatePath);
         $updated = str_replace(['{{name}}', '{{description}}', '{{fileName}}'], [$name, $description, $fileName], $template);
-        file_put_contents("Books/$name/index.php", $updated);
+        file_put_contents("books/$name/index.php", $updated);
     }
 
-    header("Location: Books/$name/");
+    header("Location: books/$name/");
     exit();
 }
 ?>

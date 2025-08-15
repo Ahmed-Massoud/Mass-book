@@ -186,7 +186,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                   <ul class='hardcover_front'>
                     <li>
                       <div class="coverDesign blue" 
-     style="background-image: url('Books/<?php echo htmlspecialchars($name); ?>/<?php echo htmlspecialchars($coverName); ?>')">
+     style="background-image: url('books/<?php echo htmlspecialchars($name); ?>/<?php echo htmlspecialchars($coverName); ?>')">
 </div>
                     </li>
                     <li>

@@ -129,10 +129,12 @@ $mybooks = mysqli_query($conn, "SELECT * FROM `books` LIMIT $offset, $booksPerPa
       <div class="books" id="Pbooks">
         <div class="component" id="books">
           <ul class="align al1">
-          <?php while ($data = mysqli_fetch_assoc($mybooks)) { ?>
+            <?php foreach ($mybooks as $data) { ?>
               <li>
                 <?php
                 $dataId = $data["id"];
+                $name = $data["name"];
+                $coverName = $data["coverName"];
                 ?>
                 <?php
                 echo "<input type='checkbox' id='Pbook$dataId'><label for='Pbook$dataId'>";
@@ -145,9 +147,9 @@ $mybooks = mysqli_query($conn, "SELECT * FROM `books` LIMIT $offset, $booksPerPa
 
                   <ul class='hardcover_front'>
                     <li>
-                      <div class="coverDesign blue">
-
-                      </div>
+                      <div class="coverDesign blue" 
+     style="background-image: url('books/<?php echo htmlspecialchars($name); ?>/<?php echo htmlspecialchars($coverName); ?>')">
+</div>
                     </li>
                     <li>
                     </li>
@@ -161,11 +163,11 @@ $mybooks = mysqli_query($conn, "SELECT * FROM `books` LIMIT $offset, $booksPerPa
                     </li>
                     <li style="color:#000;">
 
-                      <p titel="name:--------.">name: <?= $data["name"]  ?></p>
+                      <p titel="name:--------.">name: <?= $data["name"] ?></p>
                       <p>Language:----.</p>
                       <p>rate:5.0.</p>
                       <p>learn:.....</p>
-                      <a href="games.php"> <button>
+                      <a href="Books/<?php echo htmlspecialchars($name); ?>/"> <button>
                           <p>download</p>
                         </button>
                       </a>
